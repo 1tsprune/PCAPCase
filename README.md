@@ -139,12 +139,24 @@ Output written to: results/
 
 <table align="center">
   <tr>
-    <td><img src="screenshots/executive-summary.png" alt="Executive Summary & AI" width="400"/></td>
-    <td><img src="screenshots/visualizations.png" alt="Interactive VirusTotal Graph" width="400"/></td>
+    <td align="center">
+      <img src="screenshots/executive-summary.png" alt="Executive Summary & AI" width="400"/><br>
+      <b>Executive Summary & AI Insights</b>
+    </td>
+    <td align="center">
+      <img src="screenshots/visualizations.png" alt="Interactive VirusTotal Graph" width="400"/><br>
+      <b>Interactive VirusTotal Graph</b>
+    </td>
   </tr>
   <tr>
-    <td><img src="screenshots/findings.png" alt="Findings & Evidence" width="400"/></td>
-    <td><img src="screenshots/iocs.png" alt="Timeline & IOC Extraction" width="400"/></td>
+    <td align="center">
+      <img src="screenshots/findings.png" alt="Findings & Evidence" width="400"/><br>
+      <b>Findings & Evidence Mapping</b>
+    </td>
+    <td align="center">
+      <img src="screenshots/iocs.png" alt="Timeline & IOC Extraction" width="400"/><br>
+      <b>Host Inventory & IOCs</b>
+    </td>
   </tr>
 </table>
 
