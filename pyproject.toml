@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pcapcase"
-version = "1.0.0"
+version = "1.1.0"
 description = "Offline network forensics CLI for evidence-backed PCAP triage"
 readme = "README.md"
 requires-python = ">=3.10"

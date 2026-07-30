@@ -3,7 +3,7 @@
 Offline network forensics CLI for evidence-backed PCAP triage and automated reporting. 
 Transforms raw PCAP/PCAPNG files into actionable intelligence: timelines, host inventories, carved objects, IOCs, and MITRE ATT&CK mapped findings.
 
-License: MIT · Platform: Windows/Linux · Language: Python · Engine: TShark · Status: v1.0 Stable
+License: MIT · Platform: Windows/Linux · Language: Python · Engine: TShark · Status: v1.1 Stable
 
 ## If you are... Start here
 
@@ -35,10 +35,25 @@ pcapcase analyze incident.pcap --host 10.0.0.5 --protocol dns,http \
   --start 2024-01-01T00:00:00Z --end 2024-01-01T01:00:00Z
 ```
 
-Optional YARA scanning is local-only and opt-in:
+Optional local-only YARA scanning for extracted objects:
 
 ```bash
 pcapcase analyze incident.pcap --extract-http --yara-rules ./rules/
+```
+
+## Threat Intelligence (VirusTotal)
+
+PCAPCase v1.1+ introduces an **offline-friendly** Threat Intelligence sync. You can fetch YARA rules directly from VirusTotal to your local machine, and then scan your PCAPs entirely offline. No PCAP data is ever uploaded.
+
+```bash
+# 1. Set your VirusTotal API Key
+export VT_API_KEY="your_api_key_here"
+
+# 2. Sync the latest YARA rules from VT to your local machine
+pcapcase vt-sync --yara-limit 50
+
+# 3. Analyze your PCAP offline using the freshly synced VT rules
+pcapcase analyze incident.pcap --extract-http --yara-rules ~/.pcapcase/vt/yara/
 ```
 
 ## Methodology
@@ -87,6 +102,7 @@ PCAPCase shells out to local `tshark` with subprocess argument arrays and never 
 - v0.2: detection pack
 - v0.3: analyst workflow
 - v1.0: stable schemas, STIX export, packaging, Docker support, and plugin interface
+- v1.1: interactive HTML visualizations and VirusTotal YARA rules synchronization
 
 ## Security and privacy
 

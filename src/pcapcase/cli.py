@@ -57,6 +57,11 @@ def build_parser() -> argparse.ArgumentParser:
     extract = sub.add_parser("extract", help="Safely extract HTTP objects")
     extract.add_argument("pcap")
     extract.add_argument("--output", "-o", default="case")
+    
+    vt = sub.add_parser("vt-sync", help="Sync YARA rules and IOCs from VirusTotal (Requires VT_API_KEY env var)")
+    vt.add_argument("--yara-limit", type=int, default=20, help="Number of latest YARA rules to fetch (default: 20)")
+    vt.add_argument("--output", "-o", help="Custom directory to save synced VT data")
+
     report = sub.add_parser("report", help="Render report from case.json")
     report.add_argument("case_json")
     report.add_argument("--output", "-o", default="report.md")
@@ -79,6 +84,14 @@ def main(argv: list[str] | None = None) -> int:
             objects = extract_http_objects(args.pcap, args.output, runner)
             print(f"Extracted objects: {len(objects)}")
             return 0
+        if args.command == "vt-sync":
+            from .vt_sync import sync_yara_rules, VTSyncError
+            try:
+                sync_yara_rules(output_dir=args.output, limit=args.yara_limit)
+                return 0
+            except VTSyncError as e:
+                print(f"[!] VT Sync Error: {e}", file=sys.stderr)
+                return 1
         if args.command == "report":
             return render_report(args)
     except (TSharkError, ValueError, YaraScanError) as exc:
