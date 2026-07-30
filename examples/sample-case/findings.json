@@ -1,0 +1,343 @@
+[
+  {
+    "category": "internal-recon",
+    "confidence": "medium",
+    "description": "Host 172.23.4.115 attempted TCP connections across 1 ports and 15 destinations within 60 seconds.",
+    "destination_hosts": [
+      "116.202.120.165",
+      "13.107.21.239",
+      "142.251.175.157",
+      "192.124.249.13",
+      "20.194.184.156",
+      "216.239.38.181",
+      "23.215.7.5",
+      "23.9.199.195",
+      "66.96.225.200",
+      "74.125.200.155",
+      "74.125.200.97",
+      "74.125.24.100",
+      "74.125.68.94",
+      "74.125.68.95",
+      "96.17.96.30"
+    ],
+    "evidence": [
+      {
+        "field": "tcp.flags.syn",
+        "frame_number": 79,
+        "protocol": "tcp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y tcp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tcp.stream -e tcp.flags.syn -e tcp.flags.ack -e tcp.flags.reset",
+        "tcp_stream": 5,
+        "timestamp": "2024-11-04T13:05:09.767492Z",
+        "value": "SYN burst"
+      },
+      {
+        "field": "tcp.flags.syn",
+        "frame_number": 143,
+        "protocol": "tcp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y tcp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tcp.stream -e tcp.flags.syn -e tcp.flags.ack -e tcp.flags.reset",
+        "tcp_stream": 6,
+        "timestamp": "2024-11-04T13:05:09.841320Z",
+        "value": "SYN burst"
+      },
+      {
+        "field": "tcp.flags.syn",
+        "frame_number": 241,
+        "protocol": "tcp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y tcp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tcp.stream -e tcp.flags.syn -e tcp.flags.ack -e tcp.flags.reset",
+        "tcp_stream": 8,
+        "timestamp": "2024-11-04T13:05:14.413595Z",
+        "value": "SYN burst"
+      },
+      {
+        "field": "tcp.flags.syn",
+        "frame_number": 244,
+        "protocol": "tcp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y tcp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tcp.stream -e tcp.flags.syn -e tcp.flags.ack -e tcp.flags.reset",
+        "tcp_stream": 9,
+        "timestamp": "2024-11-04T13:05:14.414148Z",
+        "value": "SYN burst"
+      },
+      {
+        "field": "tcp.flags.syn",
+        "frame_number": 299,
+        "protocol": "tcp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y tcp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tcp.stream -e tcp.flags.syn -e tcp.flags.ack -e tcp.flags.reset",
+        "tcp_stream": 10,
+        "timestamp": "2024-11-04T13:05:20.822382Z",
+        "value": "SYN burst"
+      },
+      {
+        "field": "tcp.flags.syn",
+        "frame_number": 313,
+        "protocol": "tcp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y tcp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tcp.stream -e tcp.flags.syn -e tcp.flags.ack -e tcp.flags.reset",
+        "tcp_stream": 11,
+        "timestamp": "2024-11-04T13:05:20.945788Z",
+        "value": "SYN burst"
+      },
+      {
+        "field": "tcp.flags.syn",
+        "frame_number": 314,
+        "protocol": "tcp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y tcp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tcp.stream -e tcp.flags.syn -e tcp.flags.ack -e tcp.flags.reset",
+        "tcp_stream": 12,
+        "timestamp": "2024-11-04T13:05:20.946689Z",
+        "value": "SYN burst"
+      },
+      {
+        "field": "tcp.flags.syn",
+        "frame_number": 315,
+        "protocol": "tcp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y tcp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tcp.stream -e tcp.flags.syn -e tcp.flags.ack -e tcp.flags.reset",
+        "tcp_stream": 13,
+        "timestamp": "2024-11-04T13:05:20.947422Z",
+        "value": "SYN burst"
+      },
+      {
+        "field": "tcp.flags.syn",
+        "frame_number": 316,
+        "protocol": "tcp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y tcp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tcp.stream -e tcp.flags.syn -e tcp.flags.ack -e tcp.flags.reset",
+        "tcp_stream": 14,
+        "timestamp": "2024-11-04T13:05:20.948844Z",
+        "value": "SYN burst"
+      },
+      {
+        "field": "tcp.flags.syn",
+        "frame_number": 2098,
+        "protocol": "tcp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y tcp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tcp.stream -e tcp.flags.syn -e tcp.flags.ack -e tcp.flags.reset",
+        "tcp_stream": 15,
+        "timestamp": "2024-11-04T13:05:34.438499Z",
+        "value": "SYN burst"
+      }
+    ],
+    "first_seen": "2024-11-04T13:05:09.767492Z",
+    "id": "tcp-scan-84c82c93d51b",
+    "last_seen": "2024-11-04T13:05:36.022470Z",
+    "mitre_attack": [
+      {
+        "confidence": "high",
+        "id": "T1046",
+        "name": "Network Service Discovery",
+        "tactic": "Discovery"
+      }
+    ],
+    "recommendations": [
+      "Check whether the source is an authorized scanner.",
+      "Review destination services and any successful follow-up sessions."
+    ],
+    "severity": "low",
+    "source_hosts": [
+      "172.23.4.115"
+    ],
+    "title": "TCP port scan detected"
+  },
+  {
+    "category": "malware-delivery",
+    "confidence": "high",
+    "description": "HTTP GET requested syswor64.exe with extension/content type associated with executable, script, archive, or macro-capable content.",
+    "destination_hosts": [
+      "172.23.4.107"
+    ],
+    "evidence": [
+      {
+        "field": "http.request.full_uri",
+        "frame_number": 7485,
+        "protocol": "http",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y http -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tcp.stream -e http.request.method -e http.request.full_uri -e http.host -e http.user_agent -e http.response.code -e http.content_type -e http.content_length -e http.file_data -e urlencoded-form.key -e urlencoded-form.value",
+        "tcp_stream": 57,
+        "timestamp": "2024-11-04T13:06:03.090710Z",
+        "value": "http://172.23.4.107:8443/syswor64.exe"
+      }
+    ],
+    "first_seen": "2024-11-04T13:06:03.090710Z",
+    "id": "download-2e3e47b5b62d",
+    "last_seen": "2024-11-04T13:06:03.090710Z",
+    "mitre_attack": [
+      {
+        "confidence": "medium",
+        "id": "T1105",
+        "name": "Ingress Tool Transfer",
+        "tactic": "Command and Control"
+      }
+    ],
+    "recommendations": [
+      "Confirm whether the download was user-initiated or an approved update.",
+      "If an object was carved, hash and analyze it in a safe offline lab without executing it."
+    ],
+    "severity": "medium",
+    "source_hosts": [
+      "172.23.4.115"
+    ],
+    "title": "Suspicious executable download"
+  },
+  {
+    "category": "internal-recon",
+    "confidence": "medium",
+    "description": "Host 172.23.4.115 sent ARP requests for 10 distinct IPs within 60 seconds.",
+    "destination_hosts": [
+      "172.23.4.10",
+      "172.23.4.11",
+      "172.23.4.12",
+      "172.23.4.14",
+      "172.23.4.2",
+      "172.23.4.3",
+      "172.23.4.4",
+      "172.23.4.5",
+      "172.23.4.7",
+      "172.23.4.9"
+    ],
+    "evidence": [
+      {
+        "field": "arp.dst.proto_ipv4",
+        "frame_number": 7805,
+        "protocol": "arp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y arp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e arp.src.hw_mac -e arp.src.proto_ipv4 -e arp.dst.hw_mac -e arp.dst.proto_ipv4 -e arp.opcode",
+        "tcp_stream": null,
+        "timestamp": "2024-11-04T13:06:32.856981Z",
+        "value": "10 distinct targets"
+      },
+      {
+        "field": "arp.dst.proto_ipv4",
+        "frame_number": 7808,
+        "protocol": "arp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y arp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e arp.src.hw_mac -e arp.src.proto_ipv4 -e arp.dst.hw_mac -e arp.dst.proto_ipv4 -e arp.opcode",
+        "tcp_stream": null,
+        "timestamp": "2024-11-04T13:06:33.351376Z",
+        "value": "10 distinct targets"
+      },
+      {
+        "field": "arp.dst.proto_ipv4",
+        "frame_number": 7815,
+        "protocol": "arp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y arp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e arp.src.hw_mac -e arp.src.proto_ipv4 -e arp.dst.hw_mac -e arp.dst.proto_ipv4 -e arp.opcode",
+        "tcp_stream": null,
+        "timestamp": "2024-11-04T13:06:33.895649Z",
+        "value": "10 distinct targets"
+      },
+      {
+        "field": "arp.dst.proto_ipv4",
+        "frame_number": 7818,
+        "protocol": "arp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y arp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e arp.src.hw_mac -e arp.src.proto_ipv4 -e arp.dst.hw_mac -e arp.dst.proto_ipv4 -e arp.opcode",
+        "tcp_stream": null,
+        "timestamp": "2024-11-04T13:06:34.346117Z",
+        "value": "10 distinct targets"
+      },
+      {
+        "field": "arp.dst.proto_ipv4",
+        "frame_number": 7821,
+        "protocol": "arp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y arp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e arp.src.hw_mac -e arp.src.proto_ipv4 -e arp.dst.hw_mac -e arp.dst.proto_ipv4 -e arp.opcode",
+        "tcp_stream": null,
+        "timestamp": "2024-11-04T13:06:34.873110Z",
+        "value": "10 distinct targets"
+      },
+      {
+        "field": "arp.dst.proto_ipv4",
+        "frame_number": 7824,
+        "protocol": "arp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y arp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e arp.src.hw_mac -e arp.src.proto_ipv4 -e arp.dst.hw_mac -e arp.dst.proto_ipv4 -e arp.opcode",
+        "tcp_stream": null,
+        "timestamp": "2024-11-04T13:06:35.342709Z",
+        "value": "10 distinct targets"
+      },
+      {
+        "field": "arp.dst.proto_ipv4",
+        "frame_number": 7827,
+        "protocol": "arp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y arp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e arp.src.hw_mac -e arp.src.proto_ipv4 -e arp.dst.hw_mac -e arp.dst.proto_ipv4 -e arp.opcode",
+        "tcp_stream": null,
+        "timestamp": "2024-11-04T13:06:35.872906Z",
+        "value": "10 distinct targets"
+      },
+      {
+        "field": "arp.dst.proto_ipv4",
+        "frame_number": 7828,
+        "protocol": "arp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y arp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e arp.src.hw_mac -e arp.src.proto_ipv4 -e arp.dst.hw_mac -e arp.dst.proto_ipv4 -e arp.opcode",
+        "tcp_stream": null,
+        "timestamp": "2024-11-04T13:06:36.350317Z",
+        "value": "10 distinct targets"
+      },
+      {
+        "field": "arp.dst.proto_ipv4",
+        "frame_number": 7831,
+        "protocol": "arp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y arp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e arp.src.hw_mac -e arp.src.proto_ipv4 -e arp.dst.hw_mac -e arp.dst.proto_ipv4 -e arp.opcode",
+        "tcp_stream": null,
+        "timestamp": "2024-11-04T13:06:36.844927Z",
+        "value": "10 distinct targets"
+      },
+      {
+        "field": "arp.dst.proto_ipv4",
+        "frame_number": 7834,
+        "protocol": "arp",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y arp -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e arp.src.hw_mac -e arp.src.proto_ipv4 -e arp.dst.hw_mac -e arp.dst.proto_ipv4 -e arp.opcode",
+        "tcp_stream": null,
+        "timestamp": "2024-11-04T13:06:37.354558Z",
+        "value": "10 distinct targets"
+      }
+    ],
+    "first_seen": "2024-11-04T13:06:32.856981Z",
+    "id": "arp-sweep-a2d03ef274b6",
+    "last_seen": "2024-11-04T13:06:37.354558Z",
+    "mitre_attack": [
+      {
+        "confidence": "medium",
+        "id": "T1018",
+        "name": "Remote System Discovery",
+        "tactic": "Discovery"
+      }
+    ],
+    "recommendations": [
+      "Confirm whether the source is an approved scanner or inventory system.",
+      "Review adjacent timeline events for follow-on connections."
+    ],
+    "severity": "low",
+    "source_hosts": [
+      "172.23.4.115"
+    ],
+    "title": "ARP sweep detected"
+  },
+  {
+    "category": "exfiltration",
+    "confidence": "medium",
+    "description": "HTTP POST upload-like request observed toward 172.23.4.123; file_like=True, content_length=42356.",
+    "destination_hosts": [
+      "172.23.4.123"
+    ],
+    "evidence": [
+      {
+        "field": "http.request.method",
+        "frame_number": 8076,
+        "protocol": "http",
+        "reproduction_command": "tshark -r examples/sample-case/naissur.pcap -Y http -T fields -E header=n -E \"separator=\t\" -E occurrence=f -e frame.number -e frame.time_utc -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tcp.stream -e http.request.method -e http.request.full_uri -e http.host -e http.user_agent -e http.response.code -e http.content_type -e http.content_length -e http.file_data -e urlencoded-form.key -e urlencoded-form.value",
+        "tcp_stream": 64,
+        "timestamp": "2024-11-04T13:07:23.116582Z",
+        "value": "POST"
+      }
+    ],
+    "first_seen": "2024-11-04T13:07:23.116582Z",
+    "id": "http-exfil-b2ff9fe06dfb",
+    "last_seen": "2024-11-04T13:07:23.116582Z",
+    "mitre_attack": [
+      {
+        "confidence": "medium",
+        "id": "T1041",
+        "name": "Exfiltration Over C2 Channel",
+        "tactic": "Exfiltration"
+      }
+    ],
+    "recommendations": [
+      "Validate whether this upload matches expected application behavior.",
+      "Review request destination, user agent, size, and adjacent DNS/TLS events."
+    ],
+    "severity": "low",
+    "source_hosts": [
+      "172.23.4.115"
+    ],
+    "title": "HTTP upload / possible exfiltration"
+  }
+]

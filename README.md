@@ -1,20 +1,20 @@
 # PCAPCase
 
-Network forensics CLI that turns PCAP files into timelines, host inventories,
-extracted objects, IOCs, and evidence-backed findings.
+Offline network forensics CLI for evidence-backed PCAP triage and automated reporting. 
+Transforms raw PCAP/PCAPNG files into actionable intelligence: timelines, host inventories, carved objects, IOCs, and MITRE ATT&CK mapped findings.
 
-License: MIT · Platform: Windows/Linux · Language: Python · Engine: TShark · Status: v1.0 stable tool
+License: MIT · Platform: Windows/Linux · Language: Python · Engine: TShark · Status: v1.0 Stable
 
 ## If you are... Start here
 
 | If you are... | Start here |
 | --- | --- |
-| A SOC analyst triaging a PCAP | `pcapcase analyze sample.pcap --output case` + `report.md` |
+| A SOC analyst triaging a PCAP | `pcapcase analyze sample.pcap --output case` + [report.md (sample-report)](examples/sample-case/report.md) or [report.html (sample-report)](examples/sample-case/report.html) |
 | A DFIR analyst validating evidence | [methodology/02-evidence-model.md](methodology/02-evidence-model.md) |
 | A detection engineer | [mapping/network-behavior-coverage.md](mapping/network-behavior-coverage.md) |
 | A student learning packet forensics | [methodology/00-pcapcase-process.md](methodology/00-pcapcase-process.md) |
 | A contributor adding a detector | [templates/detector-spec.md](templates/detector-spec.md) |
-| A recruiter / hiring manager | README + methodology docs + sample report |
+| A recruiter / hiring manager | README + methodology docs + [sample report](examples/sample-case/report.md) |
 
 ## What this is
 
@@ -90,12 +90,13 @@ PCAPCase shells out to local `tshark` with subprocess argument arrays and never 
 
 ## Security and privacy
 
-PCAPCase is offline-only. It never uploads captures or derived data, never executes extracted files, redacts secrets by default, sanitizes carved object filenames, and prevents path traversal.
+PCAPCase is **offline-by-design**. It never uploads captures or derived data, never executes extracted files, redacts secrets by default, sanitizes carved object filenames, and prevents path traversal.
 
 ## Author
 
-PCAPCase contributors.
+**Eky Januarta**  
+[1tsprune.com](https://1tsprune.com) | [GitHub: 1tsprune](https://github.com/1tsprune)
 
 ## License
 
-MIT
+[MIT](LICENSE)

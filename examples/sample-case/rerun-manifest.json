@@ -1,0 +1,29 @@
+{
+  "cli_args": [
+    "analyze",
+    "examples/sample-case/naissur.pcap",
+    "--output",
+    "case-wsl-test",
+    "--html"
+  ],
+  "filters": {
+    "end": null,
+    "host": null,
+    "protocol": null,
+    "start": null
+  },
+  "input_path": "examples/sample-case/naissur.pcap",
+  "input_sha256": "b6014d9e1663415dfb9b716f7dcfe7cb6bb94e37a1530df484c236d9a46be323",
+  "optional_features": {
+    "extract_http": false,
+    "html": true,
+    "redaction": true,
+    "yara": false
+  },
+  "output_directory": "case-wsl-test",
+  "pcapcase_version": "1.0.0",
+  "python_version": "3.12.3",
+  "run_timestamp": "2026-07-30T00:25:58Z",
+  "schema_version": "1.0",
+  "tshark_version": "TShark (Wireshark) 4.2.2 (Git v4.2.2 packaged as 4.2.2-1.1build3)."
+}
