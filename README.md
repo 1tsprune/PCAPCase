@@ -3,7 +3,11 @@
 Offline network forensics CLI for evidence-backed PCAP triage and automated reporting. 
 Transforms raw PCAP/PCAPNG files into actionable intelligence: timelines, host inventories, carved objects, IOCs, and MITRE ATT&CK mapped findings.
 
-License: MIT · Platform: Windows/Linux · Language: Python · Engine: TShark · Status: v1.1 Stable
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey.svg)]()
+[![Language](https://img.shields.io/badge/Language-Python%203.10+-blue.svg)]()
+[![Engine](https://img.shields.io/badge/Engine-TShark-e02251.svg)]()
+[![Status](https://img.shields.io/badge/Status-v1.1%20Stable-success.svg)]()
 
 ## If you are... Start here
 
