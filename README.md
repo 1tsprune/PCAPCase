@@ -73,7 +73,19 @@ PCAPCase follows `Ingest → Scope → Extract → Correlate → Validate → Re
 
 v1.0 includes core triage, the detection pack for ARP/ICMP/TCP scans, suspicious executable downloads, HTTP upload/possible exfiltration, cleartext credential exposure, optional local YARA scanning of extracted objects, stable output schemas, and a detector plugin interface.
 
-## Example output
+## Interactive HTML Report
+
+PCAPCase generates a modern, interactive HTML report with built-in visualizations, network graphs, and finding tables.
+
+| Executive Summary | Visualizations & Graphs |
+| :---: | :---: |
+| ![Executive Summary](screenshots/executive-summary.png) | ![Visualizations](screenshots/visualizations.png) |
+
+| Evidence-Backed Findings | Extracted IOCs |
+| :---: | :---: |
+| ![Findings](screenshots/findings.png) | ![IOCs](screenshots/iocs.png) |
+
+## Example output structure
 
 ```text
 case/
