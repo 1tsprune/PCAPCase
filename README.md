@@ -10,10 +10,10 @@ License: MIT · Platform: Windows/Linux · Language: Python · Engine: TShark ·
 | If you are... | Start here |
 | --- | --- |
 | A SOC analyst triaging a PCAP | `pcapcase analyze sample.pcap --output case` + `report.md` |
-| A DFIR analyst validating evidence | `methodology/02-evidence-model.md` |
-| A detection engineer | `mapping/network-behavior-coverage.md` |
-| A student learning packet forensics | `methodology/00-pcapcase-process.md` |
-| A contributor adding a detector | `templates/detector-spec.md` |
+| A DFIR analyst validating evidence | [methodology/02-evidence-model.md](methodology/02-evidence-model.md) |
+| A detection engineer | [mapping/network-behavior-coverage.md](mapping/network-behavior-coverage.md) |
+| A student learning packet forensics | [methodology/00-pcapcase-process.md](methodology/00-pcapcase-process.md) |
+| A contributor adding a detector | [templates/detector-spec.md](templates/detector-spec.md) |
 | A recruiter / hiring manager | README + methodology docs + sample report |
 
 ## What this is
