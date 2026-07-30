@@ -15,12 +15,12 @@
 
 <table align="center">
   <tr>
-    <td><img src="screenshoots/1.png" alt="HTML Report Overview" width="400"/></td>
-    <td><img src="screenshoots/2.png" alt="Interactive VirusTotal Graph" width="400"/></td>
+    <td><img src="screenshots/1.png" alt="HTML Report Overview" width="400"/></td>
+    <td><img src="screenshots/2.png" alt="Interactive VirusTotal Graph" width="400"/></td>
   </tr>
   <tr>
-    <td><img src="screenshoots/3.png" alt="AI Executive Summary" width="400"/></td>
-    <td><img src="screenshoots/4.png" alt="Timeline & IOC Extraction" width="400"/></td>
+    <td><img src="screenshots/3.png" alt="AI Executive Summary" width="400"/></td>
+    <td><img src="screenshots/4.png" alt="Timeline & IOC Extraction" width="400"/></td>
   </tr>
 </table>
 
