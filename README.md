@@ -13,19 +13,6 @@
 
 ---
 
-<table align="center">
-  <tr>
-    <td><img src="screenshots/1.png" alt="HTML Report Overview" width="400"/></td>
-    <td><img src="screenshots/2.png" alt="Interactive VirusTotal Graph" width="400"/></td>
-  </tr>
-  <tr>
-    <td><img src="screenshots/3.png" alt="AI Executive Summary" width="400"/></td>
-    <td><img src="screenshots/4.png" alt="Timeline & IOC Extraction" width="400"/></td>
-  </tr>
-</table>
-
----
-
 ## Table of Contents
 
 - [Features](#features)
@@ -148,7 +135,20 @@ Output written to: results/
 
 ## Interactive HTML Dashboard
 
-The standalone HTML report (`report.html`) opens in any browser with no server required. It includes:
+> The standalone HTML report (`report.html`) opens in any browser with no server required.
+
+<table align="center">
+  <tr>
+    <td><img src="screenshots/executive-summary.png" alt="Executive Summary & AI" width="400"/></td>
+    <td><img src="screenshots/visualizations.png" alt="Interactive VirusTotal Graph" width="400"/></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/findings.png" alt="Findings & Evidence" width="400"/></td>
+    <td><img src="screenshots/iocs.png" alt="Timeline & IOC Extraction" width="400"/></td>
+  </tr>
+</table>
+
+It includes:
 
 - **Executive Summary** — Metric cards, severity distribution charts, and AI-generated overview.
 - **Findings Table** — Sortable list of behavioral detections mapped to MITRE ATT&CK.
