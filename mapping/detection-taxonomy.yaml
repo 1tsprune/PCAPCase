@@ -1,0 +1,98 @@
+schema_version: "1.0"
+detectors:
+  arp_sweep:
+    category: internal-recon
+    module: pcapcase.detectors.scan
+    function: detect_arp_sweeps
+    status: implemented
+    min_version: 1.0.0
+    mitre:
+      - id: T1018
+        name: Remote System Discovery
+        tactic: Discovery
+        confidence: medium
+    required_protocols:
+      - arp
+    output:
+      - finding
+      - timeline
+  icmp_sweep:
+    category: internal-recon
+    module: pcapcase.detectors.scan
+    function: detect_icmp_sweeps
+    status: implemented
+    min_version: 1.0.0
+    mitre:
+      - id: T1018
+        name: Remote System Discovery
+        tactic: Discovery
+        confidence: medium
+    required_protocols:
+      - icmp
+    output:
+      - finding
+      - timeline
+  tcp_port_scan:
+    category: internal-recon
+    module: pcapcase.detectors.scan
+    function: detect_tcp_port_scans
+    status: implemented
+    min_version: 1.0.0
+    mitre:
+      - id: T1046
+        name: Network Service Discovery
+        tactic: Discovery
+        confidence: high
+    required_protocols:
+      - tcp
+    output:
+      - finding
+      - timeline
+  suspicious_executable_download:
+    category: malware-delivery
+    module: pcapcase.detectors.download
+    class: SuspiciousDownloadDetector
+    status: implemented
+    min_version: 1.0.0
+    mitre:
+      - id: T1105
+        name: Ingress Tool Transfer
+        tactic: Command and Control
+        confidence: medium
+    required_protocols:
+      - http
+    output:
+      - finding
+      - indicator
+      - extracted_object
+  http_upload_possible_exfiltration:
+    category: exfiltration
+    module: pcapcase.detectors.exfiltration
+    function: detect
+    status: implemented
+    min_version: 1.0.0
+    mitre:
+      - id: T1041
+        name: Exfiltration Over C2 Channel
+        tactic: Exfiltration
+        confidence: medium
+    required_protocols:
+      - http
+    output:
+      - finding
+      - indicator
+  cleartext_credential_observed:
+    category: credential-leakage
+    module: pcapcase.detectors.credentials
+    function: detect
+    status: implemented
+    min_version: 1.0.0
+    mitre:
+      - id: T1552
+        name: Unsecured Credentials
+        tactic: Credential Access
+        confidence: medium
+    required_protocols:
+      - http
+    output:
+      - finding

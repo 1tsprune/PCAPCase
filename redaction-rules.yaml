@@ -1,0 +1,28 @@
+rules:
+  - name: authorization-header
+    pattern: '(?i)(Authorization:\s*)([^\r\n]+)'
+    replacement: '\1<redacted>'
+  - name: cookie-header
+    pattern: '(?i)(Cookie:\s*)([^\r\n]+)'
+    replacement: '\1<redacted>'
+  - name: password-parameter
+    pattern: '(?i)(password=)[^&\s]+'
+    replacement: '\1<redacted>'
+  - name: passwd-parameter
+    pattern: '(?i)(passwd=)[^&\s]+'
+    replacement: '\1<redacted>'
+  - name: pwd-parameter
+    pattern: '(?i)(pwd=)[^&\s]+'
+    replacement: '\1<redacted>'
+  - name: token-parameter
+    pattern: '(?i)(token=)[^&\s]+'
+    replacement: '\1<redacted>'
+  - name: api-key-parameter
+    pattern: '(?i)((?:api_key|apikey)=)[^&\s]+'
+    replacement: '\1<redacted>'
+  - name: secret-parameter
+    pattern: '(?i)(secret=)[^&\s]+'
+    replacement: '\1<redacted>'
+  - name: basic-auth
+    pattern: '(?i)(Basic\s+)[A-Za-z0-9+/=]+'
+    replacement: '\1<redacted>'
